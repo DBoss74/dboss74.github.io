@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style>
+        .crabs{
+			width:200px;
+			height:50px;
+			background-image:url(crab.png);
+			background-size:contain;
+			background-repeat: no-repeat;
+			position:relative;
+			display:inline-block;
+			background-repeat: no-repeat;
+
+
+		}
+		
+	</style>
+</head>
+
+<body>
+    <div style="background-color: red; width: 100px: height: 100px; position: absolute; display: inline-block;" id="clear">
+        <h1>Clear</h1>
+    </div>
+    <script type="text/javascript">
+    function makeCrabs() {
+        var crab = document.createElement("div");
+        document.body.appendChild(crab);
+
+
+
+        crab.classList.add("crabs")
+
+        var clear = document.getElementById("clear");
+        clear.addEventListener("click", function() {
+            crab.style.opacity = "0";
+        });
+
+        function time() {
+
+            crab.style.left = Math.round(Math.random() * 200) + "px";
+            crab.style.top = Math.round(Math.random() * 200) + "px";
+
+        };
+        setInterval(time, 100);
+
+    };
+
+
+
+    for (var i = 0; i < 100; i = i + 1) {
+        makeCrabs();
+    }
+    </script>
+</body>
+
+</html>

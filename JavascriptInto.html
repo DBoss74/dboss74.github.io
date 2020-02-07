@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style> 
+		#team{
+			width:1300px;
+			height:800px;
+			background-color: black;
+
+		}
+
+	</style>
+</head>
+<body>
+
+	<div id="team"></div>
+
+	<script type="text/javascript">
+
+
+		var team = document.getElementById("team");
+		var teams = ["url(https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSFUjsDPqVioI1dy7vt3vRGiJnKRk908m94vwbmxgGx-e8mLQAG9XfjD-rj7or7I0A7LSxQA1Y6w04B8f_K4aC6lYt13f-FVXJhnacXOhecEEYuyqnxBGFB5w&usqp=CAc)", "url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTddIM8yGhyeqB8pLmBSMtfBf83HbaDAZ-sPSWq2fhibRi5rIgmaQ&s)", "url(https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQqnh27PKaMKpQHmSenKwayVaPwJMzbWewQNYjxo1kzYzFJFXB2-SsP2ERGWqpcBKTmo-ng1wHAsTfTOc7_oZNsPbSel6x3ZpFKm5f3BA2Dh8LQuuKHoE8eTA&usqp=CAc)", "url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0Jd2YdssGTgUI2kexH93G-tp332isfZbCrEiez79kggleO7Y-Rg&s)", "url(https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRewb08AbGbI9PQi0H442dDBrTtw3nTfaV-IeB_TDArBaSieED2-gbkMdnawh2UyImaJWfgu-Uwi6n6Gt-hCFvZkqXjY4DAOlTmOXsh_UZXaxfpYPdd2BtW_g&usqp=CAc)", "url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqK1VsAR1jyCW6qpP0bJpUdX4BLevr-p3AKepTLPCIMCLR4qgK_Q&s)"]
+
+		var randomhat;
+
+
+
+		// function dylan(x) {
+		// 	console.log("hey"+x)
+		// }
+
+
+		team.addEventListener('click', function(){
+			randomhat = Math.round(Math.random()*5); 
+			team.innerText = randomhat;
+
+
+
+			team.style.backgroundImage = teams[randomhat];
+
+
+			
+
+
+		});
+
+
+
+
+		
+	</script>
+
+
+</body>
+</html>

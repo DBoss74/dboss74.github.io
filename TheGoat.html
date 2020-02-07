@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style>
+        .goats{
+			width:250px;
+			height:60px;
+			background-image:url(Kobe.png);
+			background-size:contain;
+			background-repeat: no-repeat;
+			position:relative;
+			display:inline-block;
+			background-repeat: no-repeat;
+
+
+		}
+		
+	</style>
+</head>
+
+<body>
+    <script type="text/javascript">
+    function makeGoats() {
+        var goat = document.createElement("div");
+        document.body.appendChild(goat);
+        goat.classList.add("goats")
+
+
+        function Kobe() {
+
+            goat.style.left = Math.round(Math.random() * 200) + "px";
+            goat.style.top = Math.round(Math.random() * 200) + "px";
+
+        };
+setInterval(Kobe, 800)
+
+
+
+    }
+
+    for (var i = 0; i < 20; i = i + 1) {
+        makeGoats();
+    }
+    </script>
+</body>
+
+</html>
