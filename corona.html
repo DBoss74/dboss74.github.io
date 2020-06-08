@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style>
+        .viruses{
+			width:100px;
+			height:50px;
+			background-image:url(corona.png);
+			background-size:contain;
+			background-repeat: no-repeat;
+			position:relative;
+			display:inline-block;
+			background-repeat: no-repeat;
+
+
+		}
+		
+	</style>
+</head>
+
+<body>
+    <div style="background-color: blue; width: 100px: height: 100px; position: absolute; display: inline-block;" id="clear">
+        <h1>Clear</h1>
+    </div>
+    <script type="text/javascript">
+    function makeViruses() {
+        var virus = document.createElement("div");
+        document.body.appendChild(virus);
+
+
+
+        virus.classList.add("viruses")
+
+        var clear = document.getElementById("clear");
+        clear.addEventListener("click", function() {
+            virus.style.opacity = "0";
+        });
+
+        function time() {
+
+            virus.style.left = Math.round(Math.random() * 200) + "px";
+            virus.style.top = Math.round(Math.random() * 200) + "px";
+
+        };
+        setInterval(time, 100);
+
+    };
+
+
+
+    for (var i = 0; i < 1000; i = i + 1) {
+        makeViruses();
+    }
+    </script>
+</body>
+
+</html>

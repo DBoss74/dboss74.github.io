@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style>
+        .hearts{
+			width:200px;
+			height:50px;
+			background-image:url(heart.png);
+			background-size:contain;
+			background-repeat: no-repeat;
+			position:relative;
+			display:inline-block;
+			background-repeat: no-repeat;
+
+
+		}
+		
+	</style>
+</head>
+
+<body>
+    <div style="background-color: red; width: 100px: height: 100px; position: absolute; display: inline-block;" id="clear">
+        <h1>Happy Mother's Day!</h1>
+    </div>
+    <script type="text/javascript">
+    function makeHearts() {
+        var heart = document.createElement("div");
+        document.body.appendChild(heart);
+
+
+
+        heart.classList.add("hearts")
+
+        var clear = document.getElementById("clear");
+        clear.addEventListener("click", function() {
+            heart.style.opacity = "0";
+        });
+
+        function time() {
+
+            heart.style.left = Math.round(Math.random() * 200) + "px";
+            heart.style.top = Math.round(Math.random() * 200) + "px";
+
+        };
+        setInterval(time, 100);
+
+    };
+
+
+
+    for (var i = 0; i < 100; i = i + 1) {
+        makeHearts();
+    }
+    </script>
+</body>
+
+</html>
